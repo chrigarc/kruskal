@@ -1,0 +1,12 @@
+graph,directed,false
+vertex,label,v0,color,1
+vertex,label,v1,color,2
+vertex,label,v2,color,1
+vertex,label,v3,color,2
+vertex,label,v4,color,1
+vertex,label,v5,color,1
+edge,source,v0,target,v1,weight,1,color,1
+edge,source,v2,target,v4,weight,-3,color,2
+edge,source,v1,target,v5,weight,2,color,1
+edge,source,v5,target,v4,weight,1,color,2
+edge,source,v3,target,v2,weight,4,color,1
