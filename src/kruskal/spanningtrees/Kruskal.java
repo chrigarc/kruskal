@@ -13,6 +13,7 @@ import utils.NeighbourListGraph;
 import utils.Vertex;
 import kruskal.structures.ColaPrioridad;
 import kruskal.structures.ConjuntosAjenos;
+import java.util.TreeSet;
 
 /**
  *
@@ -30,17 +31,24 @@ public class Kruskal implements MinimumSpanningTree{
             }
         }
         System.out.println("numero de aristas:" + aristas.length);
+        /*
         ColaPrioridad cola = new ColaPrioridad(aristas);
         for(int i=0;i<aristas.length;i++){
             cola.add(aristas[i]);
+        }
+         */
+        TreeSet<Edge> cola = new TreeSet<>();
+        for(Edge i:aristas){
+            cola.add(i);
         }
     //    System.out.println("size cola: "+cola.size());
 
         ConjuntosAjenos conjunto = new ConjuntosAjenos(vertices);
 
         LinkedList<Edge> aristas_g = new LinkedList<Edge>();
-        while(!cola.estaVacia()){
-            Edge e = cola.getMin();
+        while(!cola.isEmpty()){
+            Edge e = cola.pollFirst();
+            System.out.println("probando con la arista: " + e);
             if (e != null) {
                 Vertex v_i = e.getSource();
                 Vertex v_f = e.getTarget();

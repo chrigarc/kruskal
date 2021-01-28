@@ -25,8 +25,11 @@ public class NeighbourListGraph<E> extends EdgeGraph{
 	List<Vertex<E>> lista = generaListaAdyacencias();
 	for(int i=0;i<lista.size();i++){
 	    tmp_s += lista.get(i).getElement() +" : ";
-	    for(int j=0;j<lista.get(i).getNeighboursList().size();j++)
-		tmp_s+=lista.get(i).getNeighboursList().get(j).getElement() + " ";
+	    for(int j=0;j<lista.get(i).getNeighboursList().size();j++){
+			tmp_s+="{ vertice: " + lista.get(i).getNeighboursList().get(j).getElement()
+					+ ", peso: "+ getEdge(lista.get(i), lista.get(i).getNeighboursList().get(j)).getWeight() + "} ";
+		}
+
 	    tmp_s+="\n";
 	}
 	return tmp_s;

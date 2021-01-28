@@ -1,0 +1,12 @@
+Arbol generador de peso minimo generado por kruskal
+
+v1 : { vertice: v5, peso: 3} 
+v2 : { vertice: v3, peso: 7} { vertice: v5, peso: 18} 
+v3 : { vertice: v2, peso: 7} 
+v4 : { vertice: v5, peso: 15} 
+v5 : { vertice: v1, peso: 3} { vertice: v2, peso: 18} { vertice: v4, peso: 15} { vertice: v6, peso: 11} { vertice: v7, peso: 12} { vertice: v8, peso: 10} 
+v6 : { vertice: v5, peso: 11} { vertice: v9, peso: 14} 
+v7 : { vertice: v5, peso: 12} 
+v8 : { vertice: v5, peso: 10} 
+v9 : { vertice: v6, peso: 14} 
+

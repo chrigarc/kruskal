@@ -7,7 +7,7 @@ package utils;
  *
  * @author	Carreño Velazquez Lizbeth Dannae
  */
-public class Edge<E> {
+public class Edge<E> implements Comparable<Edge>{
 
     /**
      * VÃ©rtice origen.
@@ -104,5 +104,16 @@ public class Edge<E> {
                 tmp.target.equals(this.target) &&
                 tmp.weight == tmp.weight;
         return status;
+    }
+
+    @Override
+    public int compareTo(Edge o) {
+        int result = 0;
+        if(o.getWeight() > this.getWeight()){
+            result = -1;
+        }else if(this.getWeight() > o.getWeight()){
+            return 1;
+        }
+        return result;
     }
 }
